@@ -1,14 +1,13 @@
 import satData from './satData';
+import './styling.css';
 
 const Buttons = ({ filterByType, setSat, displaySats }) => {
   
   return (
-    <div>
+    <div> 
       {displaySats.map((sat, id) => {
         return(
-        <div>
           <button onClick={() => filterByType(sat)} key={id}>{sat} Orbit</button>
-        </div>
         )
       })}
       <button onClick={() => setSat(satData)}>All Orbits</button>
